@@ -1,0 +1,91 @@
+@import "_vars";
+@import "_global";
+@import "_fonts";
+*,
+html {
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    a {
+        color: black;
+    }
+    background-color: red;
+    height: 10000px;
+}
+
+.header {
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    padding-left: 40px;
+    padding-top: 40px;
+    width: 280px;
+
+    &-logo {
+        width: 240px;
+        height: 180px;
+        background: #006699;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 100px;
+        a {
+            color: white;
+            letter-spacing: 2px;
+            font-size: 25px;
+            font-weight: 100;
+        }
+    }
+}
+.menu {
+    &__list-item {
+        list-style: none;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        
+
+        &-link {
+            display: block;
+            position: relative;
+            color: #006699;
+            font-size: 25px;
+            padding: 15px;
+            transition: all .5s;
+           
+            background-color: #F2F2F2;
+            &:hover{
+               
+                color: #006699;
+               padding-left: 30px;
+                .triangle-right{
+                    opacity: 1;
+                    left: -40px;
+                   
+                } 
+            }
+        }
+    }
+    &-icon {
+        padding-right: 30px;
+    }
+}
+.triangle-right {
+    position: absolute;
+    top: 9px;
+    left: -60px;
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-left: 20px solid #006699;
+    border-bottom: 20px solid transparent;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
